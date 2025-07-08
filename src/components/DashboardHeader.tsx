@@ -26,7 +26,7 @@ export const DashboardHeader = () => {
           </Badge>
         </div>
         <p className="text-muted-foreground">
-          Manage your home WiFi hotspot • Serving Nairobi neighborhood
+          Manage your home WiFi hotspot • Serving communities across Kenya
         </p>
       </div>
       
