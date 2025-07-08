@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Bell, Settings, Plus, RefreshCw, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 export const DashboardHeader = () => {
   const { toast } = useToast();
@@ -53,9 +54,11 @@ export const DashboardHeader = () => {
           <Bell className="h-4 w-4" />
         </Button>
         
-        <Button variant="ghost" size="sm">
-          <Settings className="h-4 w-4" />
-        </Button>
+        <Link to="/system">
+          <Button variant="ghost" size="sm">
+            <Settings className="h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </div>
   );
