@@ -110,7 +110,14 @@ export const RecentActivity = () => {
             Latest system events and user actions
           </p>
         </div>
-        <Button variant="outline" size="sm">
+        <Button 
+          variant="outline" 
+          size="sm"
+          onClick={() => {
+            // You could navigate to a full activity log page here
+            window.open('/system', '_blank');
+          }}
+        >
           View All
         </Button>
       </CardHeader>

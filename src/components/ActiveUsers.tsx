@@ -91,7 +91,14 @@ export const ActiveUsers = () => {
             {mockUsers.filter(u => u.status === "active").length} of {mockUsers.length} users online
           </p>
         </div>
-        <Button variant="outline" size="sm">
+        <Button 
+          variant="outline" 
+          size="sm"
+          onClick={() => toast({
+            title: "All Users",
+            description: `Viewing all ${mockUsers.length} registered users.`,
+          })}
+        >
           View All
         </Button>
       </CardHeader>

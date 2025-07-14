@@ -8,10 +8,26 @@ export const DashboardHeader = () => {
   const { toast } = useToast();
 
   const handleQuickAction = (action: string) => {
-    toast({
-      title: `${action} initiated`,
-      description: `${action} process has been started successfully.`,
-    });
+    switch (action) {
+      case "System refresh":
+        window.location.reload();
+        break;
+      case "New voucher creation":
+        // Navigate to vouchers page
+        window.location.href = "/vouchers";
+        break;
+      case "Notifications":
+        toast({
+          title: "Notifications",
+          description: "You have 3 new notifications: 2 new user registrations, 1 payment received.",
+        });
+        break;
+      default:
+        toast({
+          title: `${action} initiated`,
+          description: `${action} process has been started successfully.`,
+        });
+    }
   };
 
   return (
@@ -50,8 +66,13 @@ export const DashboardHeader = () => {
           New Voucher
         </Button>
         
-        <Button variant="ghost" size="sm">
+        <Button 
+          variant="ghost" 
+          size="sm"
+          onClick={() => handleQuickAction("Notifications")}
+        >
           <Bell className="h-4 w-4" />
+          <Badge variant="destructive" className="ml-1 px-1 py-0 text-xs">3</Badge>
         </Button>
         
         <Link to="/system">
