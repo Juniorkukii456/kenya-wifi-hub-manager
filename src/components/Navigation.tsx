@@ -9,12 +9,16 @@ import {
   Activity,
   Menu,
   X,
-  LogIn
+  LogIn,
+  Shield,
+  User
 } from "lucide-react";
 import { useState } from "react";
 
 const navigationItems = [
   { name: "Dashboard", path: "/", icon: Home },
+  { name: "Dental Admin", path: "/dental-admin", icon: Shield },
+  { name: "Patient Portal", path: "/dental-user", icon: User },
   { name: "Users", path: "/users", icon: Users },
   { name: "Vouchers", path: "/vouchers", icon: CreditCard },
   { name: "System", path: "/system", icon: Settings },

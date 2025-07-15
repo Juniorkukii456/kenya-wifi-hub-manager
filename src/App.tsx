@@ -9,6 +9,8 @@ import Users from "./pages/Users";
 import Vouchers from "./pages/Vouchers";
 import { Login } from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import DentalAdmin from "./pages/DentalAdmin";
+import DentalUser from "./pages/DentalUser";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/system" element={<SystemManagement />} />
           <Route path="/users" element={<Users />} />
           <Route path="/vouchers" element={<Vouchers />} />
+          <Route path="/dental-admin" element={<DentalAdmin />} />
+          <Route path="/dental-user" element={<DentalUser />} />
           <Route path="/login" element={<Login />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
